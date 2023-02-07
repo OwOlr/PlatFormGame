@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3095701752594061298}
   - component: {fileID: 3095701752594061293}
+  - component: {fileID: 7119847711104440592}
   - component: {fileID: 7470960618666348984}
   - component: {fileID: 4287066756761713499}
   m_Layer: 0
   m_Name: Stone
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,6 +87,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7119847711104440592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3095701752594061292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64f03faf6f409c4d966a87562ff79fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!58 &7470960618666348984
 CircleCollider2D:
   m_ObjectHideFlags: 0
