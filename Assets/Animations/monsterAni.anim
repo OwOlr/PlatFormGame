@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LeftAni
+  m_Name: monsterAni
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,18 +20,14 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 9e37cfd7cc160d547bb35fb73e7be2cb, type: 3}
-    - time: 0.083333336
-      value: {fileID: 21300000, guid: 418b1a78e24aa714f9743118e9ebb6b3, type: 3}
+      value: {fileID: 21300000, guid: 11cc4c8ee3a80b9428ebf10699e7a33d, type: 3}
     - time: 0.16666667
-      value: {fileID: 21300000, guid: a843eca186708144bb51b77cd83c95f8, type: 3}
-    - time: 0.25
-      value: {fileID: 21300000, guid: 1fad8f0f1fc59a84c9e09cd7e6e59fbc, type: 3}
+      value: {fileID: 21300000, guid: b2d8be7143515f54196b93a4d7f9055d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 12
+  m_SampleRate: 6
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -46,10 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 9e37cfd7cc160d547bb35fb73e7be2cb, type: 3}
-    - {fileID: 21300000, guid: 418b1a78e24aa714f9743118e9ebb6b3, type: 3}
-    - {fileID: 21300000, guid: a843eca186708144bb51b77cd83c95f8, type: 3}
-    - {fileID: 21300000, guid: 1fad8f0f1fc59a84c9e09cd7e6e59fbc, type: 3}
+    - {fileID: 21300000, guid: 11cc4c8ee3a80b9428ebf10699e7a33d, type: 3}
+    - {fileID: 21300000, guid: b2d8be7143515f54196b93a4d7f9055d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

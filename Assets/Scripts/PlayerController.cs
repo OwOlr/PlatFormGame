@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed=2f;
+    public float jumpPower = 5f;
     float vx = 0;
-    float vy = 0;
     Rigidbody2D playerRigid;
 
     bool flipFlag = false;
@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         vx = 0;
-        vy = 0;
         if (Input.GetKey("right"))
         {
             vx = speed;
@@ -33,17 +32,42 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey("left"))
         {
-            vx = speed;
+            vx = -speed;
             flipFlag = true;
         }
-        if (Input.GetKey("up"))
+        //groundFlag로 1단 점프만 허용 (여러번 연타 점프제한)
+        if (Input.GetKey("up")&&groundFlag)
         {
-
+            //꾸욱 눌렀을 때 연속 점프 제한.
+            if (pushFlag ==false)
+            {
+                jumpFlag = true;
+                pushFlag = true;
+            }
+        }
+        else
+        {
+            pushFlag = false;
         }
     }
     private void FixedUpdate()
     {
-        playerRigid.velocity = new Vector2(vx, vy);
+        playerRigid.velocity = new Vector2(vx, playerRigid.velocity.y);
         this.GetComponent<SpriteRenderer>().flipX = flipFlag;
+        if (jumpFlag)
+        {
+            jumpFlag = false;
+            playerRigid.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
+
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        groundFlag = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        groundFlag = false;
     }
 }
